@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodie Express</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+      }
+
+      header {
+        background: #ff4d4d;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .hero {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+        background-size: cover;
+        background-position: center;
+        color: white;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        background: #ff4d4d;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .products {
+        padding: 50px;
+      }
+
+      .products h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .card-content h3 {
+        margin-bottom: 10px;
+      }
+
+      .price {
+        color: #ff4d4d;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .cart-btn {
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .cart-section {
+        padding: 50px;
+      }
+
+      .cart-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .cart {
+        background: white;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+      }
+
+      .total {
+        text-align: right;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ff4d4d;
+      }
+
+      footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+        }
+
+        nav ul {
+          margin-top: 10px;
+        }
+
+        .hero h1 {
+          font-size: 35px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Foodie Express</div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Delicious Food Delivered Fast</h1>
+      <p>Order your favorite meals online</p>
+      <a href="#" class="btn">Order Now</a>
+    </section>
+
+    <section class="products">
+      <h2>Popular Dishes</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+          />
+          <div class="card-content">
+            <h3>Burger</h3>
+            <p class="price">₹199</p>
+            <button class="cart-btn">Add To Cart</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591"
+          />
+          <div class="card-content">
+            <h3>Pizza</h3>
+            <p class="price">₹299</p>
+            <button class="cart-btn">Add To Cart</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1604908176997-431fa7f8f4f0"
+          />
+          <div class="card-content">
+            <h3>Biryani</h3>
+            <p class="price">₹249</p>
+            <button class="cart-btn">Add To Cart</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+          />
+          <div class="card-content">
+            <h3>French Fries</h3>
+            <p class="price">₹149</p>
+            <button class="cart-btn">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <h2>Shopping Cart</h2>
+
+      <div class="cart">
+        <div class="cart-item">
+          <span>Burger</span>
+          <span>₹199</span>
+        </div>
+
+        <div class="cart-item">
+          <span>Pizza</span>
+          <span>₹299</span>
+        </div>
+
+        <hr />
+
+        <div class="total">Total: ₹498</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Foodie Express | Designed by Vaishnavi</p>
+    </footer>
+  </body>
+</html>
