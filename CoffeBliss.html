@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Bliss</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #f8f5f2;
+      }
+
+      /* Header */
+
+      header {
+        background: #4b2e2e;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+      }
+
+      .logo {
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: bold;
+      }
+
+      /* Home */
+
+      .hero {
+        height: 90vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+      }
+
+      .hero h1 {
+        font-size: 55px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin: 15px 0;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        background: #c19a6b;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      /* Menu */
+
+      section {
+        padding: 60px 50px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #4b2e2e;
+      }
+
+      .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .price {
+        color: #c19a6b;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      /* Contact */
+
+      .contact {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .contact input,
+      .contact textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+      }
+
+      .contact button {
+        width: 100%;
+        padding: 12px;
+        background: #4b2e2e;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Footer */
+
+      footer {
+        background: #4b2e2e;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+        }
+
+        nav {
+          margin-top: 10px;
+        }
+
+        .hero h1 {
+          font-size: 38px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">☕ Coffee Bliss</div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Home Page -->
+
+    <section class="hero" id="home">
+      <h1>Fresh Coffee Everyday</h1>
+      <p>Experience the best coffee in town</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </section>
+
+    <!-- Menu Page -->
+
+    <section id="menu">
+      <h2>Our Menu</h2>
+
+      <div class="menu-container">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+          />
+          <div class="card-content">
+            <h3>Espresso</h3>
+            <p>Strong and rich coffee shot.</p>
+            <p class="price">₹120</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1517701604599-bb29b565090c"
+          />
+          <div class="card-content">
+            <h3>Cappuccino</h3>
+            <p>Classic coffee with milk foam.</p>
+            <p class="price">₹180</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735"
+          />
+          <div class="card-content">
+            <h3>Latte</h3>
+            <p>Smooth coffee with steamed milk.</p>
+            <p class="price">₹200</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0"
+          />
+          <div class="card-content">
+            <h3>Cold Coffee</h3>
+            <p>Refreshing chilled coffee.</p>
+            <p class="price">₹150</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+
+      <div class="contact">
+        <input type="text" placeholder="Your Name" />
+
+        <input type="email" placeholder="Your Email" />
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button>Send Message</button>
+
+        <br /><br />
+
+        <p><strong>📍 Address:</strong> Guntakal, Andhra Pradesh</p>
+        <p><strong>📞 Phone:</strong> +91 9876543210</p>
+        <p><strong>✉️ Email:</strong> coffeebliss@gmail.com</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Coffee Bliss | Designed by Anchakatta Vaishnavi</p>
+    </footer>
+  </body>
+</html>
